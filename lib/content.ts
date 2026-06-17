@@ -3,14 +3,26 @@ export const profile = {
   role: "Full-Stack Builder & Automation Architect",
   tagline: "Turning business problems into scalable, AI-powered digital products.",
   email: "blooviper@gmail.com",
-  location: "Utah, USA",
+  location: "Vineyard, Utah",
   liveProjectsHref: "#projects",
 };
+
+export const navLinks = [
+  { label: "Projects", href: "#projects" },
+  { label: "Workflow", href: "#workflow" },
+  { label: "Contact", href: "#contact" },
+];
+
+export const socials = [
+  { label: "GitHub", href: "https://github.com/DJbeats182" },
+  { label: "Email", href: "mailto:blooviper@gmail.com" },
+];
 
 export type Project = {
   name: string;
   href: string;
   domain: string;
+  featured?: boolean;
   challenge: string;
   stack: string[];
   scales: string;
@@ -22,11 +34,12 @@ export const projects: Project[] = [
     name: "Flvme",
     href: "https://flvme.com",
     domain: "flvme.com",
+    featured: true,
     challenge:
-      "Ship a high-performance product landing hub that loads instantly and converts — a destination polished enough to anchor the brand, not just describe it.",
+      "Flvme needed a landing hub that felt like the product itself — not a brochure pointing at it. The bar was steep: instant load, zero layout jank on any device, and a look sharp enough to carry the brand on its own.",
     stack: ["Next.js", "Tailwind CSS", "Vercel", "AI Agents"],
     scales:
-      "Built on an AI-first lifecycle so UI components iterate in minutes, not days. The modular architecture lets the layout evolve without touching core load times or SEO — fast stays fast as the surface area grows.",
+      "I built the UI as composable blocks, so adding a section is a prompt and a preview — not a rebuild. Lighthouse stays green as the page grows, and the SEO never pays for the polish. New ideas land in minutes, not days.",
     accent: "electric",
   },
   {
@@ -34,10 +47,10 @@ export const projects: Project[] = [
     href: "https://rocket-repair.com",
     domain: "rocket-repair.com",
     challenge:
-      "Give a specialized repair business one conversion-oriented platform to handle service intake and customer communication without a back-office bottleneck.",
+      "A specialized repair shop was losing jobs to phone tag and sticky-note intake. They needed one place where a customer request lands, gets tracked, and turns into booked work — without anyone babysitting a spreadsheet.",
     stack: ["Next.js", "Supabase", "AI Agents", "Vercel"],
     scales:
-      "Autonomous coding agents sit in the update pipeline, so new feature requests and service changes ship through a prompt-to-production workflow. The business stays agile while staying off the hook for manual code.",
+      "Supabase runs intake and customer comms in real time. New service types or form fields ship through a prompt-to-preview loop: I describe the change, an agent writes it, I approve the preview. No back-office bottleneck, no manual coding crunch.",
     accent: "tech",
   },
   {
@@ -45,10 +58,10 @@ export const projects: Project[] = [
     href: "https://peakperformancewindowfilms.com",
     domain: "peakperformancewindowfilms.com",
     challenge:
-      "Signal premium value and carry the visitor from interest to service inquiry with zero friction — every section earning the next click.",
+      "Premium window film is a trust sale. The site had to look the part and walk a visitor from 'just looking' to 'book me' without hitting a single dead end along the way.",
     stack: ["Next.js", "TypeScript", "Supabase", "Vercel"],
     scales:
-      "Structured for rapid prototyping on a PRD-to-Production pipeline: new marketing hooks and layout changes get tested in an isolated preview environment and only reach production once they're performance-verified.",
+      "Every marketing hook and layout bet gets staged on a real preview URL and pressure-tested before it touches production. I ship what's verified and kill what isn't — fast iteration without ever gambling on the live site.",
     accent: "electric",
   },
 ];
