@@ -3,6 +3,7 @@ export const profile = {
   role: "Full-Stack Builder & Automation Architect",
   tagline: "Turning business problems into scalable, AI-powered digital products.",
   email: "blooviper@gmail.com",
+  location: "Utah, USA",
   liveProjectsHref: "#projects",
 };
 
@@ -90,7 +91,7 @@ export const workflow: WorkflowStep[] = [
     label: "Verify",
     title: "Approval",
     description:
-      "Performance, accessibility, and acceptance criteria are checked against the PRD. Nothing ships on vibes — it ships when it passes.",
+      "Performance, data integrity, and acceptance criteria are checked against the PRD. Nothing ships on vibes — it ships when it passes validation.",
     icon: "checkCircle",
   },
   {

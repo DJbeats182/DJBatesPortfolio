@@ -26,7 +26,7 @@ export default function Contact() {
               className="glow-electric group inline-flex items-center justify-center gap-2 rounded-xl bg-electric px-6 py-3.5 text-sm font-semibold text-white transition-transform hover:-translate-y-0.5"
             >
               <Mail size={17} />
-              {profile.email}
+              Get in touch via email
               <ArrowRight
                 size={16}
                 className="transition-transform group-hover:translate-x-0.5"
