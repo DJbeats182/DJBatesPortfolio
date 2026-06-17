@@ -1,0 +1,87 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ink: #05070a;
+  --color-surface: #0a0e14;
+  --color-surface-2: #0f141c;
+  --color-line: #1a2230;
+  --color-muted: #8a97a8;
+  --color-fg: #e7edf5;
+
+  --color-electric: #2f81f7;
+  --color-electric-bright: #5aa2ff;
+  --color-tech: #2bd4a0;
+  --color-tech-bright: #4de8b8;
+
+  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, -apple-system,
+    "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, "SF Mono", "Fira Code",
+    monospace;
+}
+
+:root {
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-ink);
+  color: var(--color-fg);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Ambient background grid + glow, kept GPU-cheap */
+.bg-grid {
+  background-image: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0.03) 1px,
+      transparent 1px
+    ),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 64px 64px;
+}
+
+.glow-electric {
+  box-shadow: 0 0 0 1px rgba(47, 129, 247, 0.25),
+    0 18px 60px -20px rgba(47, 129, 247, 0.45);
+}
+
+.text-gradient {
+  background: linear-gradient(
+    100deg,
+    var(--color-fg) 0%,
+    var(--color-electric-bright) 55%,
+    var(--color-tech-bright) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-rise {
+  animation: rise 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .animate-rise {
+    animation: none;
+  }
+}
